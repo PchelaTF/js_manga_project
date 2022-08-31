@@ -1,0 +1,17 @@
+@import "~normalize.css";
+
+h1 {
+    color: tomato;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: tomato;
+    margin: 0 auto;
+}
+
+.footer {
+    background-image: url("../img/index_img.jpg");
+    height: 200px;
+}
