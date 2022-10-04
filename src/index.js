@@ -8,12 +8,13 @@ import Pagination from './components/Pagination/Pagination';
 
 let url = `https://kitsu.io/api/edge/manga?page%5Blimit%5D=12&page%5Boffset%5D=0`;
 
-(async () => await Card.render(url))();
+// (async () => await Card.render(url))();
 
 // (async () => await Pagination.render(url))();
 
 function render() {
-    return Pagination.render(url);
+    Card.render(url);
+    Pagination.render(url);
 }
 render();
 

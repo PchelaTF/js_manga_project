@@ -9,14 +9,14 @@ class Pagination {
         let links = data.links;
         console.log(data);
 
-        let URLCHECK = url;
+        // let URLCHECK = url;
 
-        let mangaCount = data.meta.count;
-        console.log(mangaCount);
+        // let mangaCount = data.meta.count;
+        // console.log(mangaCount);
 
-        const mangaPerPage = 12;
-        const countPage = Math.round(mangaCount / mangaPerPage);
-        console.log(countPage);
+        // const mangaPerPage = 12;
+        // const countPage = Math.round(mangaCount / mangaPerPage);
+        // console.log(countPage);
 
         // let pageLists = '';
 
@@ -31,9 +31,9 @@ class Pagination {
         let html = `
             <ul class="pagination">
                 <li class="waves-effect"><a href="${links.first}"><i class="material-icons">fast_rewind</i></a></li>
-                <li class="${(links.prev) ? "waves-effect" : "disabled"}"><a href="${(links.prev) ? links.prev : '#'}"><i class="material-icons">chevron_left</i></a></li>
+                <li class="${(links.prev) ? "waves-effect" : "disabled inactive"}"><a href="${(links.prev)}"><i class="material-icons">chevron_left</i></a></li>
             
-                <li class="waves-effect"><a href="${links.next}"><i class="material-icons">chevron_right</i></a></li>
+                <li class="${(links.next) ? "waves-effect" : "disabled inactive"}"><a href="${links.next}"><i class="material-icons">chevron_right</i></a></li>
                 <li class="waves-effect"><a href="https://kitsu.io/api/edge/manga?page%5Blimit%5D=12&page%5Boffset%5D=52320"><i class="material-icons">fast_forward</i></a></li>
             </ul>
         `;
