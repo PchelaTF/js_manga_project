@@ -110,7 +110,3 @@ module.exports = {
     },
     optimization: optimization()
 };
-
-// "start": "webpack serve --mode development --open",
-// "dev": "webpack",
-// "build": "webpack --node-env=production",

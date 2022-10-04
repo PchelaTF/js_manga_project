@@ -1,20 +1,43 @@
 import './index.html';
-import './styles/index.css';
+import '../node_modules/materialize-css/dist/css/materialize.css';
+import '../node_modules/materialize-css/dist/js/materialize.js';
 import './styles/index.scss';
 
-const greeting = "Hello";
-console.log(greeting);
+import Card from './components/Cards';
+import Pagination from './components/Pagination/Pagination';
 
-class Helper {
+let url = `https://kitsu.io/api/edge/manga?page%5Blimit%5D=12&page%5Boffset%5D=0`;
 
-    render() {
-        const div = document.createElement('div');
-        div.classList.add('box');
+(async () => await Card.render(url))();
 
-        document.body.appendChild(div);
-    }
+// (async () => await Pagination.render(url))();
+
+function render() {
+    return Pagination.render(url);
+}
+render();
+
+function swith() {
+
+    document.querySelector('.pagination').addEventListener('click', (event) => {
+        event.preventDefault();
+
+        let target = event.target;
+        let url = target.href;
+        let urlParent;
+
+        if (!url) {
+            urlParent = target.parentNode.href;
+        }
+
+        (url) ? Card.render(url) : Card.render(urlParent);
+        (url) ? Pagination.render(url) : Pagination.render(urlParent);
+
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
 }
 
-const box = new Helper();
-
-box.render();
+swith();
