@@ -9,9 +9,6 @@ body {
     max-width: 1280px;
     padding: 0 15px;
     margin: 0 auto;
-
-    @media (max-width: 767.98px) {
-    }
 }
 
 h1 {
@@ -24,117 +21,6 @@ h1 {
     gap: 50px;
     justify-content: center;
     margin: 50px 0;
-
-    @media (max-width: 1276.98px) {
-    }
 }
 
-.card {
-    width: 350px;
-    margin: 0;
 
-    @media (max-width: 1276.98px) {
-        flex: 0 0 31%;
-    }
-
-    // @media (max-width: 1139.98px) {
-    //     flex: 0 1 100%;
-    // }
-
-    &-image {
-        width: 350px;
-        height: 500px;
-
-        // @media (max-width: 1276.98px) {
-        //     width: 100%;
-        //     height: 900px;
-        // }
-
-        & img {
-            position: absolute !important;
-            width: 100%;
-            height: 100% !important;
-            object-fit: fill !important;
-        }
-    }
-
-    &-content {
-        & a {
-            overflow: hidden;
-        }
-
-        & span {
-            display: flex !important;
-            justify-content: space-between;
-        }
-    }
-
-    &-title {
-        font-size: 20px !important;
-        font-weight: 700 !important;
-    }
-
-    &-reveal {
-        display: flex;
-        flex-direction: column;
-        & span {
-            display: flex !important;
-            justify-content: space-between;
-        }
-    }
-}
-
-.activator {
-    cursor: pointer;
-}
-
-.right {
-    margin: 0 !important;
-}
-
-.pagination {
-    position: fixed;
-    right: 0;
-    top: 50%;
-    width: 200px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-
-    @media (max-width: 1476.98px) {
-        position: static;
-        flex-direction: row;
-        margin: 0 auto;
-        padding-bottom: 25px;
-    }
-}
-
-.inactive {
-    pointer-events: none;
-    visibility: hidden;
-    display: none !important;
-}
-
-.brand-logo {
-    right: 50%;
-    transform: translateX(50%);
-}
-
-.preloader__container {
-    position: fixed;
-    top: 0;
-    // left: 0;
-    // bottom: 0;
-    // right: 0;
-    width: 1250px;
-    // height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 10;
-    // height: 15px;
-    height: 100%;
-    background-color: #fff;
-    opacity: 0.6;
-}

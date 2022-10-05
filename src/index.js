@@ -5,40 +5,16 @@ import './styles/index.scss';
 
 import Card from './components/Cards';
 import Pagination from './components/Pagination/Pagination';
+import Header from './components/Header/Header';
+import PageSwitching from './components/PageSwitching/PageSwitching';
 
-let url = `https://kitsu.io/api/edge/manga?page%5Blimit%5D=12&page%5Boffset%5D=0`;
+const url = `https://kitsu.io/api/edge/manga?page%5Blimit%5D=12&page%5Boffset%5D=0`;
 
-// (async () => await Card.render(url))();
-
-// (async () => await Pagination.render(url))();
-
-function render() {
+function renderPage() {
+    Header.render();
     Card.render(url);
     Pagination.render(url);
 }
-render();
+renderPage();
 
-function swith() {
-
-    document.querySelector('.pagination').addEventListener('click', (event) => {
-        event.preventDefault();
-
-        let target = event.target;
-        let url = target.href;
-        let urlParent;
-
-        if (!url) {
-            urlParent = target.parentNode.href;
-        }
-
-        (url) ? Card.render(url) : Card.render(urlParent);
-        (url) ? Pagination.render(url) : Pagination.render(urlParent);
-
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-}
-
-swith();
+PageSwitching.swith();

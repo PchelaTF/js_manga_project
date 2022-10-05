@@ -1,0 +1,12 @@
+.brand-logo {
+    left: 50%;
+    transform: translateX(-50%);
+
+    @media (max-width: 383.98px) {
+        font-size: 2rem !important;
+    }
+
+    @media (max-width: 370.98px) {
+        font-size: 1.5rem !important;
+    }
+}

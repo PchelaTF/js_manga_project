@@ -1,0 +1,35 @@
+.pagination {
+    position: fixed;
+    right: 0;
+    top: 70px;
+    width: 200px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow: auto;
+
+    @media (max-width: 1559.98px) {
+        position: static;
+        flex-direction: row;
+        margin: 0 auto;
+        padding-bottom: 25px;
+        width: auto;
+    }
+
+    @media (max-width: 991.98px) {
+        gap: 0;
+    }
+
+    & li i {
+        @media (max-width: 767.98px) {
+            // font-size: 1.5rem;
+        }
+    }
+}
+
+.inactive {
+    pointer-events: none;
+    visibility: hidden;
+    display: none !important;
+}

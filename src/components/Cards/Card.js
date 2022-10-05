@@ -1,5 +1,7 @@
+import { ROOT_MANGA } from '../../constants/root';
 import { getDataAPI } from '../../utils/getDataAPI';
 import Preloader from '../Preloder/Preloader';
+import './Card.scss';
 
 class Card {
 
@@ -31,7 +33,7 @@ class Card {
                 `;
         });
 
-        document.querySelector('.manga').innerHTML = html;
+        ROOT_MANGA.innerHTML = html;
         Preloader.preloaderHide();
     }
 }

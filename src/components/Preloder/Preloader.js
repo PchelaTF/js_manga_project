@@ -1,3 +1,6 @@
+import { ROOT_PRELOADER } from "../../constants/root";
+import './Preloader.scss';
+
 class Preloader {
 
     preloaderHide() {
@@ -11,7 +14,7 @@ class Preloader {
             </div>
         `;
 
-        document.querySelector('.preloader').innerHTML = preloader;
+        ROOT_PRELOADER.innerHTML = preloader;
     }
 }
 
