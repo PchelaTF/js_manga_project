@@ -7,7 +7,9 @@ class Card {
 
     async render(url) {
         Preloader.render();
+
         const data = await getDataAPI.getData(url);
+
         let CATALOG = data.data;
         let html = '';
 
@@ -34,6 +36,7 @@ class Card {
         });
 
         ROOT_MANGA.innerHTML = html;
+
         Preloader.preloaderHide();
     }
 }

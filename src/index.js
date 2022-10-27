@@ -3,7 +3,7 @@ import '../node_modules/materialize-css/dist/css/materialize.css';
 import '../node_modules/materialize-css/dist/js/materialize.js';
 import './styles/index.scss';
 
-import Card from './components/Cards';
+import Card from './components/Cards/Card';
 import Pagination from './components/Pagination/Pagination';
 import Header from './components/Header/Header';
 import PageSwitching from './components/PageSwitching/PageSwitching';

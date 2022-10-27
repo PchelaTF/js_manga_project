@@ -11,7 +11,6 @@ class PageSwitching {
         };
     }
 
-
     swith() {
         document.querySelector('.pagination').addEventListener('click', (event) => {
             event.preventDefault();
@@ -25,10 +24,10 @@ class PageSwitching {
 
                 Card.render(url);
                 Pagination.render(url);
+
                 this.scrollTo();
 
                 if (!url) {
-                    console.log(url);
                     return false;
                 }
 
@@ -36,8 +35,8 @@ class PageSwitching {
 
                 Card.render(url);
                 Pagination.render(url);
-                this.scrollTo();
 
+                this.scrollTo();
             }
         });
     }
